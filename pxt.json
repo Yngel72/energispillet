@@ -10,7 +10,8 @@
         "README.md",
         "assets.json",
         "tutorial2n.md",
-        "tutorial1n.md"
+        "tutorial1n.md",
+        "tutorial3n.md"
     ],
     "testFiles": [
         "test.ts"
