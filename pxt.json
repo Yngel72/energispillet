@@ -11,7 +11,8 @@
         "assets.json",
         "tutorial2n.md",
         "tutorial1n.md",
-        "tutorial3n.md"
+        "tutorial3n.md",
+        "tutorial4n.md"
     ],
     "testFiles": [
         "test.ts"
