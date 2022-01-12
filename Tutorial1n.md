@@ -405,4 +405,4 @@ sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
 ### Step 7
 Og det var det! Nå har du laget en ny type energi som kan høstes et uendelig antall ganger! Om du vil, kan du nå gå videre til neste utfordring som er å animere spillfiguren din slik at den beveger seg litt mer realistisk.
 
-
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
