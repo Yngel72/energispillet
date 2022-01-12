@@ -9,7 +9,8 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "tutorial2n.md"
+        "tutorial2n.md",
+        "Tutorial1n.md"
     ],
     "testFiles": [
         "test.ts"
