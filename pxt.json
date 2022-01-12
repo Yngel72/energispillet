@@ -12,7 +12,8 @@
         "tutorial2n.md",
         "tutorial1n.md",
         "tutorial3n.md",
-        "tutorial4n.md"
+        "tutorial4n.md",
+        "tutorial5n.md"
     ],
     "testFiles": [
         "test.ts"
