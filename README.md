@@ -4,7 +4,7 @@
 > Open this page at [https://yngel72.github.io/energispillet/](https://yngel72.github.io/energispillet/)
 
 ## Tutorial links:
-* [Tutorial1](energispillet/tutorial1n) [Start](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/Tutorial1n)
+* [Tutorial1](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/Tutorial1n)
 
 ## Use as Extension
 
