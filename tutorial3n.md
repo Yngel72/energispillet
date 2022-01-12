@@ -3,7 +3,7 @@
 ```template
 
 namespace SpriteKind {
-    export const Renewable = SpriteKind.create()
+    export const Fornybar = SpriteKind.create()
 }
 
 namespace myTiles {
