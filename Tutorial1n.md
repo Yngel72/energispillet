@@ -112,7 +112,24 @@ for (let index = 0; index < 100; index++) {
         . . . . . f . . . . . . . . . . 
         `, SpriteKind.Food)
     if (Math.percentChance(80)) {
-        tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
+        tiles.placeOnRandomTile(energi, img`
+d d d d d d d d d d d d d d d d 
+d d d 1 1 d d d d d d d d b d d 
+d d d 1 1 d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d b d d d d d d b b d d d d d 
+d d d d d d d d d b b d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d b d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+1 1 d d d d d d d d d d d d d d 
+1 1 d d d d d d d d d d b d d d 
+d d d d d d 1 d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d b d 
+`)
     } else {
         tiles.placeOnRandomTile(energi, sprites.castle.tileGrass1)
     }
