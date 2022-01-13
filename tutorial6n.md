@@ -178,17 +178,15 @@ for (let index = 0; index < 200; index++) {
 info.startCountdown(10)
 
 ```
-# Miljøpåvirkning - Redd planeten!
+# Grensekontroll - lag en usynlig grense og sett opp en grensevakt!
 ## Introduksjon
 ### Introduksjon @unplugged
-Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten. Denne tutorialen forutsetter at du har flere typer energikilder i spillet ditt. Om du ikke allerede har lagt til flere energityper i spillet ditt, gå tilbake og gjør den tutorialen først. Når det er gjort, klikk OK.
+Nå skal vi lage en usynlig grense som bare kan krysses ved en kontrollstasjon. Da blir det vanskeligere for rivaler å stjele ressurser fra ditt område, men kanskje det gjør spillet vanskeligere for deg også?
 
 ### Steg 1
-Vi lar planeten selv være spiller nummer 2, slik at vi kan la innsamling av noen typer energi føre til at planeten mister liv. Hent en ``||Info.set player2 life to 3||``-blokk fra ``||Info.Info||``-menyen og plasser den under resten av koden din inni hoved-``||Loops.on start||``-løkken. IKKE LAG EN NY ``||Loops.on start||``-LØKKE! Bare sett den nye blokken inn sammen med den andre koden din, i bunnen av løkken. Du kan gi planeten mer liv om du synes 3 er litt lite.
+Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.tile||``. Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en ``||Scene.tile||`` du synes passer som grensevakt og plasser den der de to øyene møtes.
 
-```blocks
-info.player2.setLife(3)
-```
+
 
 ### Steg 2
 Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
