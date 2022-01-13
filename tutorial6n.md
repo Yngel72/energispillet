@@ -178,28 +178,50 @@ for (let index = 0; index < 200; index++) {
 info.startCountdown(10)
 
 ```
-# Grenskontroll - Lag en grensekontrollstasjon i spillet ditt
+# Miljøpåvirkning - Redd planeten!
 ## Introduksjon
 ### Introduksjon @unplugged
-
-Lag grenser som ikke kan krysses og sett opp en grensevakt. Klikk OK for å lære hvordan.
+Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten. Denne tutorialen forutsetter at du har flere typer energikilder i spillet ditt. Om du ikke allerede har lagt til flere energityper i spillet ditt, gå tilbake og gjør den tutorialen først. Når det er gjort, klikk OK.
 
 ### Steg 1
-Legg til ``||scene.tile||`` som skal være grensevakt. Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken i koden din og plasser en egen tile som skal være grensevakt der de to øyene møtes, som på dette bildet:
-
-### Steg 2
-
-Du kan velge mellom flere lyder om du trykker på den lille pilen ved siden av der det står ``||Music.ba ding||`` i ``||Music.play sound ba ding||``-blokken. Prøv litt forskjellige og finn en du liker. Nå kan du gjenta disse stegene for de andre energitypene dine.
+Vi lar planeten selv være spiller nummer 2, slik at vi kan la innsamling av noen typer energi føre til at planeten mister liv. Hent en ``||Info.set player2 life to 3||``-blokk fra ``||Info.Info||``-menyen og plasser den under resten av koden din inni hoved-``||Loops.on start||``-løkken. IKKE LAG EN NY ``||Loops.on start||``-LØKKE! Bare sett den nye blokken inn sammen med den andre koden din, i bunnen av løkken. Du kan gi planeten mer liv om du synes 3 er litt lite.
 
 ```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Fornybar, function (sprite, otherSprite) {
-    tiles.placeOnRandomTile(otherSprite, assets.tile`transparency16`)
-    music.magicWand.play()
+info.player2.setLife(3)
+```
+
+### Steg 2
+Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
+
+```blocks
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    otherSprite.destroy()
     info.changeScoreBy(1)
-})
+    info.player2.changeLifeBy(-1)
 ```
 
 ### Steg 3
-Det var det hele! Å legge til lyd er ganske lett, ikke sant?
+I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
+
+```blocks
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    info.changeScoreBy(1)
+    info.player2.changeLifeBy(-1)
+})
+```
+### Steg 4
+Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)
+
+```blocks
+info.onLifeZero(function () {
+    game.over(false)
+})
+```
+
+### Steg 5
+Det var alt om miljøpåvirkning.
+Her er en ekstra liten utfordring:
+Noen handlinger har positiv effekt på miljøet. Hva med å tilføye noen få sprites som gir liv til planeten når du plukker dem opp? Kanskje plastsøppel i havet? Hvilke blokker kan du bruke for å få til dette?
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
