@@ -14,8 +14,7 @@
         "tutorial1n.md",
         "tutorial3n.md",
         "tutorial4n.md",
-        "tutorial5n.md",
-        "tutorial6no.md"
+        "tutorial5n.md"
     ],
     "testFiles": [
         "test.ts"
@@ -27,5 +26,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
