@@ -9,7 +9,7 @@ Nå skal vi lage en usynlig grense som bare kan krysses ved en kontrollstasjon. 
 Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.tile||``. Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en ``||Scene.tile||`` du synes passer som grensevakt og plasser den der de to øyene møtes.
 
 ### Steg 2
-Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
+Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på vegg-ikonet under det lille bildet av kartet. "Draw walls" kommer opp under ikonet når du peker på det.
 
 ### Steg 3
 I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
