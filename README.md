@@ -4,16 +4,12 @@
 > Open this page at [https://yngel72.github.io/energispillet/](https://yngel72.github.io/energispillet/)
 
 ## Tutorial links:
-* [Tutorial1](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial1n)
+* [Tutorial 1 - Lag en fornybar energikilde](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial1n)
+* [Tutorial 2 - Animer spillfiguren din](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial2n)
+* [Tutorial 3 - Rivaler](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial3n)
+* [Tutorial 4 - Lydeffekter](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial4n)
+* [Tutorial 5 - Miljøpåvirkning](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial5n)
 
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/yngel72/energispillet** and import
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/energispillet/workflows/MakeCode/badge.svg)
 
