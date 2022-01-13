@@ -374,6 +374,6 @@ sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
 ```
 
 ### Step 7
-Og det var det! Nå kan du lage både fornybare og ikke-fornybare energikilder!  Når du har laget alle de energikildene du vil ha med, kan du gå videre til neste utfordring som er å animere spillfiguren din slik at den beveger seg litt mer realistisk.
+Det var det hele! Nå kan du lage både fornybare og ikke-fornybare energikilder!  Når du har laget alle de energikildene du vil ha med, kan du gå videre til neste utfordring som er å animere spillfiguren din slik at den beveger seg litt mer realistisk.
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
