@@ -178,7 +178,7 @@ for (let index = 0; index < 200; index++) {
 info.startCountdown(10)
 
 ```
-# Grenskontroll - Innfør grensekontroll i spillet ditt
+# Grenskontroll - Lag en grensekontrollstasjon i spillet ditt
 ## Introduksjon
 ### Introduksjon @unplugged
 
