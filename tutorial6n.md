@@ -8,36 +8,14 @@ Nå skal vi lage en usynlig grense som bare kan krysses ved en kontrollstasjon. 
 ### Steg 1
 Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.tile||``. Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en ``||Scene.tile||`` du synes passer som grensevakt og plasser den der de to øyene møtes.
 
-
-
 ### Steg 2
 Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
-
-```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    otherSprite.destroy()
-    info.changeScoreBy(1)
-    info.player2.changeLifeBy(-1)
-```
 
 ### Steg 3
 I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
 
-```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherSprite) {
-    otherSprite.destroy()
-    info.changeScoreBy(1)
-    info.player2.changeLifeBy(-1)
-})
-```
 ### Steg 4
 Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)
-
-```blocks
-info.onLifeZero(function () {
-    game.over(false)
-})
-```
 
 ### Steg 5
 Det var alt om miljøpåvirkning.
