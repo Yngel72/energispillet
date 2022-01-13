@@ -185,7 +185,7 @@ info.startCountdown(10)
 Lag grenser som ikke kan krysses og sett opp en grensevakt. Klikk OK for å lære hvordan.
 
 ### Steg 1
-Legg til ``||scene.tile||`` som skal være grensevakt. Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken i koden din og plasser en egen tile som skal være grensevakt der de to øyene møtes, som på dette bildet: ![grensvakt](static/grensevakt.png)
+Legg til ``||scene.tile||`` som skal være grensevakt. Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken i koden din og plasser en egen tile som skal være grensevakt der de to øyene møtes, som på dette bildet: ![grensvakt](/static/grensevakt.png)
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
