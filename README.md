@@ -9,7 +9,7 @@
 * [Tutorial 3 - Rivaler](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial3n)
 * [Tutorial 4 - Lydeffekter](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial4n)
 * [Tutorial 5 - Miljøpåvirkning](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial5n)
-
+* [Tutorial 6 - Grensekontroll](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial6n)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/energispillet/workflows/MakeCode/badge.svg)
 
