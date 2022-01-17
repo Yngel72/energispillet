@@ -377,8 +377,8 @@ let mySprite2 = sprites.create(img`
     `, SpriteKind.Enemy)
 info.setLife(3)
 tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
-mySprite.setVelocity(50, 50)
-mySprite.setBounceOnWall(true)
+mySprite2.setVelocity(50, 50)
+mySprite2.setBounceOnWall(true)
 ```
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
