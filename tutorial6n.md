@@ -184,7 +184,7 @@ Nå skal vi lage en usynlig grense som bare kan krysses ved en kontrollstasjon. 
 
 ### Steg 1
 Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.tile||``. Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en ``||Scene.tile||`` du synes passer som grensevakt og plasser den der de to øyene møtes.
-![Grensevakt](/grensevakt1.png)
+![Grensevakt](https://github.com/Yngel72/energispillet/blob/master/grensevakt1.png)
 
 ### Steg 2
 Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på vegg-ikonet under det lille bildet av kartet på venstre side av skjermen. "Draw walls" kommer opp under ikonet når du peker på det.
