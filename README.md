@@ -4,6 +4,8 @@
 > Open this page at [https://yngel72.github.io/energispillet/](https://yngel72.github.io/energispillet/)
 
 ## Tutorial links:
+* [Kodeøkt del 1 - Første del av spillet](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial01)
+* [Kodeøkt del 2 - Distribuer energi urettferdig](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial02)
 * [Tutorial 1 - Lag en fornybar energikilde](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial1n)
 * [Tutorial 2 - Animer spillfiguren din](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial2n)
 * [Tutorial 3 - Rivaler](https://arcade.makecode.com/#tutorial:github:yngel72/energispillet/tutorial3n)
