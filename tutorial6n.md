@@ -187,7 +187,7 @@ Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.
 ![Grensevakt](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/grensevakt1.jpg)
 ### Steg 2
 Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på vegg-ikonet under det lille bildet av kartet på venstre side av skjermen. "Draw walls" kommer opp under ikonet når du peker på det.
-
+![Veggverktøy](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Walltool.jpg)
 ### Steg 3
 I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
 
