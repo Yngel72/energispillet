@@ -121,12 +121,12 @@ info.startCountdown(10)
 
 ```
 # Lag en fornybar energikilde
-## introduksjon
-### introduction @unplugged
+## Introduksjon
+### Introduksjon @unplugged
 
 Vi fortsetter der vi slapp. Nå skal vi legge til en fornybar energikilde. La oss legge til havvind!
 
-### Step 2
+### Steg 2
 Det første vi trenger er en ny ``||loops.repeat loop||`` for å fordele den nye energien på kartet vårt.
 Hent en ny ``||loops.Repeat loop||`` og legg den inn i koden din under den gamle energifordelingsløkken. Endre antall repetisjoner til 200.
  
@@ -189,7 +189,7 @@ info.startCountdown(10)
 
 ```
 
-### Step 3
+### Steg 3
 
 Inni den nye ``||loops.repeat ||`` blokken trenger vi nå en ny ``||sprite.set mySprite to...||`` blokk fra
  ``||Sprites.Sprites||``-menyen. Klikk på ``||sprites.mySprite2||`` og lag en ny variabel. Kall den gjerne "havvind". Klikk på ``||Sprites.kind||`` og lag en ny type sprite du kan kalle "Fornybar". Klikk på det grå kvadratet og tegn den nye havvindenergien din.
@@ -272,7 +272,7 @@ info.startCountdown(10)
 ```
 
 
-### Step 4
+### Steg 4
 Vi vil at ``||Sprites.havvind||`` skal dukke opp ute i havet. Hent en ``||scene.place energy on top of random ||``-blokk fra 
 ``||Scene.scene||``-menyen og plasser den inni ``||Loops.repeat||``-blokken. Endre ``||Sprites.mySprite2||`` til ``||Sprites.havvind||`` og la det grå kvadratet være tomt. Når vi ikke definerer en bestemt type tile, vil den nye energitypen dukke opp der det ikke er lagt noen tiles på kartet, altså ute i havet.
 
@@ -353,7 +353,7 @@ info.startCountdown(10)
 
 ```
 
-### Step 5
+### Steg 5
 Vi trenger en ny ``||Sprites.overlap||``-blokk for å fange den nye energitypen. hent en fra ``||Sprites.Sprites||``-menyen og plasser en ``||Info.change score by 1||``-blokk fra ``||Info.Info||``-menyen inni den.
 
 ```blocks
@@ -362,7 +362,7 @@ sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
 })
 ```
 
-### Step 6
+### Steg 6
 Siden den nye energitypen vår er fornybar, ønsker vi ikke å fjerne ``||Sprites.havvind||`` helt når vi overlapper. I stedet for å bruke en ``||Sprites.destroy otherSprite||``-blokk skal vi bruke en ``||Scene.Place mySprite on top of random||``-blokk for å få den fornybare energien til å gjenoppstå et tilfeldig sted i havet. Husk å dra den ovale ``||Sprite.otherSprite||`` til der det står ``||Sprite.mySprite2||``, endre kind til ``||sprite.Fornybar||`` og la det grå kvadratet være som det er.
 
 ```blocks
@@ -373,7 +373,7 @@ sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
 })
 ```
 
-### Step 7
+### Steg 7
 Det var det hele! Nå kan du lage både fornybare og ikke-fornybare energikilder!  Når du har laget alle de energikildene du vil ha med, kan du gå videre til neste utfordring som er å animere spillfiguren din slik at den beveger seg litt mer realistisk.
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
