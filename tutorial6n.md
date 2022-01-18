@@ -190,9 +190,9 @@ Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på 
 ![Veggverktøy](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Walltool.jpg)
 ### Steg 3
 Tegn en vegg som deler kartet i to mellom de to øyene. Pass på at grensen går helt ut i kanten av bildet og at det ikke er hull i veggen andre steder enn ved grensevakten.
-![Grensemur](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Wall.png)
+![Grensemur](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Grensevegg4.gif)
 ### Steg 4
-Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)
+
 
 ### Steg 5
 Det var alt om miljøpåvirkning.
