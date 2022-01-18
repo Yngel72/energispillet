@@ -185,7 +185,7 @@ info.startCountdown(10)
 For å gjøre spillet ditt litt mer utfordrende, kan du legge til en fiende eller fler. Klikk "OK" for å lære hvordan. 
 
 ### Steg 1
-Begynn med å hente en ``||sprite.set mySprite to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||`` løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figure enn spillerfiguren din. DU SKAL IKKE HENTE EN NY ``||Loops.on start||``-LØKKE. BRUK DEN DU ALLEREDE HAR KODEN DIN I!
+Begynn med å hente en ``||sprite.set mySprite to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figure enn spillerfiguren din. DU SKAL IKKE HENTE EN NY ``||Loops.on start||``-LØKKE. BRUK DEN DU ALLEREDE HAR KODEN DIN I!
 
 ```blocks
 let mySprite2 = sprites.create(img`
@@ -210,7 +210,7 @@ let mySprite2 = sprites.create(img`
 
 ### Steg 2
 
-Siden den nye figuren din er en fiende, må du endre typen, altså "Kind" fra "player" til "enemy".
+Siden den nye figuren din er en fiende, må du endre typen, altså ``||Sprites.Kind||`` fra ``||Sprites.Player||`` til ``||Sprites.Enemy||``.
 
 ```blocks
 let mySprite2 = sprites.create(img`
@@ -234,7 +234,7 @@ let mySprite2 = sprites.create(img`
 ```
 
 ### Steg 3
-Plasser den nye fienden på et tilfeldig sted ved å hente en ``||Scene.place mysprite2 on top of random||``-blokk fra ``||Scene.Scene||``-menyen og plasser den under den nye mySprite2 blokken. Klikk på det grå kvadratet for å velge hvilken type tile fienden skal oppstå på.
+Plasser den nye fienden på et tilfeldig sted ved å hente en ``||Scene.place mysprite2 on top of random||``-blokk fra ``||Scene.Scene||``-menyen og plasser den under den nye ``||Variables.mySprite2||``-blokken. Klikk på det grå kvadratet for å velge hvilken type tile fienden skal oppstå på.
 
 ```blocks
 let mySprite2 = sprites.create(img`
