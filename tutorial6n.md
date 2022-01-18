@@ -189,8 +189,8 @@ Først må vi sette opp en grensevakt. Grensevakten må være en egen ``||Scene.
 Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på vegg-ikonet under det lille bildet av kartet på venstre side av skjermen. "Draw walls" kommer opp under ikonet når du peker på det.
 ![Veggverktøy](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Walltool.jpg)
 ### Steg 3
-I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
-
+Tegn en vegg som deler kartet i to mellom de to øyene. Pass på at grensen går helt ut i kanten av bildet og at det ikke er hull i veggen andre steder enn ved grensevakten.
+![Grensemur](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Wall.png)
 ### Steg 4
 Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)
 
