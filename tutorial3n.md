@@ -285,7 +285,7 @@ mySprite2.setVelocity(50, 50)
 ```
 
 ### Steg 5
-For at ikke fienden bare skal forsvinne ut av spillområdet skal vi få den til å sprette når den treffer kanten av kartet. Hent en ``||Sprites.set mySprite bounce on wall||``-blokk fra ``||Sprites.Sprites||``-menyen og endre ``||sprite.mySprite||`` til ``||sprite.mySprite2||``.
+For at ikke fienden bare skal forsvinne ut av spillområdet skal vi få den til å sprette når den treffer kanten av kartet. Hent en ``||Sprites.set mySprite bounce on wall||``-blokk fra ``||Sprites.Sprites||``-menyen og endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``.
 ```blocks
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
@@ -318,7 +318,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
 })
 ```
 ### Steg 7
-Kanskje fienden skal få samle sin egen energi? I så fall må du lage ``||Sprites.overlap||``-blokker for hver energitype i spillet. Du kan kopiere de du allerede har laget og bytte ut``||Info.change score by||``-blokkene med ``||Info.change player 2 score by 1||``-blokker fra ``||Info.Info||``-menyen og endre "Sprite kind" i ``||Sprites.overlap||``-blokken fra "Player" til "Enemy". Du kan gjøre omtrent det samme for alle energitypene. Husk at du må klikke og dra ``||Sprite.othersprite||``-ovalen inn i ``||Sprites.destroy||``-blokken for at dette skal funke om du bruker en ny ``||Sprites.destroy||``-blokk.
+Kanskje fienden skal få samle sin egen energi? I så fall må du lage ``||Sprites.overlap||``-blokker for hver energitype i spillet. Du kan kopiere de du allerede har laget og bytte ut``||Info.change score by||``-blokkene med ``||Info.change player 2 score by 1||``-blokker fra ``||Info.Info||``-menyen og endre ``||Sprites.Kind||`` i ``||Sprites.overlap||``-blokken fra ``||Sprites.Player||`` til ``||Sprites.Enemy||``. Du kan gjøre omtrent det samme for alle energitypene. Husk at du må klikke og dra ``||Variables.othersprite||``-ovalen inn i ``||Sprites.destroy||``-blokken for at dette skal funke om du bruker en ny ``||Sprites.destroy||``-blokk.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSprite) {
@@ -327,7 +327,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSpri
 })
 ```
 ### Steg 8
-Hva skal skje når spillfiguren din treffer fienden? Kanskje fienden er en tyv som stjeler poeng fra deg? Det er opp til deg, men du trenger i alle fall å hente en ``||Sprites.on sprite of kind overlaps othersprite...||``-blokk og endre "sprite kind" til "Player" og "Enemy". Kanskje stjeler tyven ett eller flere poeng fra deg om de tar deg?
+Hva skal skje når spillfiguren din treffer fienden? Kanskje fienden er en tyv som stjeler poeng fra deg? Det er opp til deg, men du trenger i alle fall å hente en ``||Sprites.on sprite of kind overlaps othersprite...||``-blokk og endre ``||Sprites.Kind||`` til ``Sprites.Player||`` og ``||Sprites.Enemy||``. Kanskje stjeler tyven ett eller flere poeng fra deg om de tar deg?
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     
