@@ -399,7 +399,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Steg 8
-Gjenta step 5 til 8 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms og slå på ``||Animation.loop||``.
+Gjenta steg 5 til 8 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms og slå på ``||Animation.loop||``.
 I det siste gapet i ``||Logic.if-then-else||``-blokken setter du inn en ``||Sprites.set mySprite image to||``-blokk og velg bildet der spillfiguren står vendt mot skjermen.
 ```blocks
 let mySprite: Sprite = null 
