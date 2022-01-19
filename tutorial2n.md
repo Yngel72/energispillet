@@ -189,7 +189,7 @@ Ved hjelp av litt ekstra kode kan du gjøre spillfiguren din levende. Klikk deg 
 
 ### Steg 1
 For at animasjonen skal spilles av riktig, må vi tvinge spillet til å oppdateres omtrent tre ganger i sekundet.
-Til det trenger vi blokken ``||Game.on game update every 500 ms||``. Hent en fra ``||Game.Game||``-menyen og endre 500 til 300 ms.
+Til det trenger vi blokken ``||Game.on game update every 500 ms||``. Hent en fra ``||Game.Game||``-menyen og endre 500 til 300 ms. Det kan være lurt å plassere denne blokken under resten av koden din. Den blir lang.
 
 ```blocks
 game.onUpdateInterval(300, function () {})
@@ -250,7 +250,7 @@ game.onUpdateInterval(300, function () {
 ```
 
 ### Steg 5
-Hent en ``||Animation.animate mySprite frames interval||`` blokk fra ``||Animation.Animation||``-menyen (under "Advanced") og plasser den i det øverste gapet i ``||Logic.if-then-else||``-blokken.
+Hent en ``||Animation.animate mySprite||``-blokk fra ``||Animation.Animation||``-menyen (under "Advanced") og plasser den i det øverste gapet i ``||Logic.if-then-else||``-blokken.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
