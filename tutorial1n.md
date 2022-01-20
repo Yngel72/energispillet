@@ -389,7 +389,7 @@ info.startCountdown(10)
 ```
 
 ### Steg 5
-Vi trenger en ny ``||Sprites.overlap||``-blokk for å fange den nye energitypen. hent en fra ``||Sprites.Sprites||``-menyen og plasser en ``||Info.change score by 1||``-blokk fra ``||Info.Info||``-menyen inni den.
+Vi trenger en ny ``||Sprites.overlap||``-blokk for å fange den nye energitypen. Hent en fra ``||Sprites.Sprites||``-menyen og plasser en ``||Info.change score by 1||``-blokk fra ``||Info.Info||``-menyen inni den.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
