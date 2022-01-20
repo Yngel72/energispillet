@@ -197,42 +197,43 @@ game.onUpdateInterval(300, function () {})
 
 ### Steg 2
 
-Nå må vi få animasjonen til å spilles av for hver bevegelsesretning. Til det trenger vi en ``||Logic.if-then-else||``-blokk fra ``||Logic.Logic||``-menyen. Hent den og plasser den i ``||Game.on game update every 300 ms||``-blokken din.
+Nå må vi få animasjonen til å spilles av for hver bevegelsesretning. Til det trenger vi en ``||Logic.if then else||``-blokk fra ``||Logic.Logic||``-menyen. Hent den og plasser den i ``||Game.on game update every 300 ms||``-blokken din.
 
 ```blocks
 game.onUpdateInterval(300, function () {
     if (true) {
-        
-    } else if (false) {
-        
+
+    } else {
+
     }
 })
 ```
 
 
 ### Steg 3
-Trykk på det lille plusstegnet nede i venstre hjørne av ``||Logic.if-then-else||``-blokken til du har fem gap i blokken. 
+Trykk på det lille plusstegnet nede i venstre hjørne av ``||Logic.if then else||``-blokken til du har fem gap i blokken. 
 Nå har du det du trenger for å få figuren til å bevege seg ulikt for hver bevegelsesretning.
 
 ```blocks
 game.onUpdateInterval(300, function () {
     if (true) {
-        
-    } else if (false) {
-        
-    } else if (false) {
-        
-    } else if (false) {
-        
-    } else {
-        
-    }
+	
+} else if (false) {
+	
+} else if (false) {
+	
+} else if (false) {
+	
+} else {
+	
+}
+
 })
 ```
 
 ### Steg 4
 Nå skal vi få figuren til å gå til venstre. 
-Hent en sekskantet ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-menyen og plasser den i den øverste sekskanten i ``||Logic.if-then-else||``-blokken. Trykk på den lille pilen til høyre for "A" og velg "left" fra menyen som dukker opp.
+Hent en ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-menyen og plasser den der det står "true" i ``||Logic.if then else||``-blokken. Trykk på den lille pilen til høyre for "A" og velg "left" fra menyen som dukker opp.
 
 ```blocks
 game.onUpdateInterval(300, function () {
@@ -250,7 +251,7 @@ game.onUpdateInterval(300, function () {
 ```
 
 ### Steg 5
-Hent en ``||Animation.animate mySprite||``-blokk fra ``||Animation.Animation||``-menyen (under "Advanced") og plasser den i det øverste gapet i ``||Logic.if-then-else||``-blokken.
+Hent en ``||Animation.animate mySprite||``-blokk fra ``||Animation.Animation||``-menyen (under "Advanced") og plasser den i det øverste gapet i ``||Logic.if then else||``-blokken.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
@@ -289,7 +290,7 @@ game.onUpdateInterval(300, function () {
 })
 ```
 ### Steg 6
-Endre der det står 500 ms til 100 ms i ``||Animation.animate mySprite||``-blokken og klikk på den lille knappen nederst i blokken slik at det står ``||Animation.loop on||``.
+Endre der det står 500 ms til 100 ms i ``||Animation.animate mySprite||``-blokken og klikk på den lille knappen nederst i blokken slik at det står ``||Animation.loop ON||``.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
@@ -327,7 +328,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Steg 7
-Klikk på det grå kvadratet. Velg "gallery" øverst på midten av skjermen og legg merke til at noen av bildene har små filmruter nederst. hold musepekeren over bildene for å se animasjonen. Finn spillfiguren din og klikk på animasjonen der figuren beveger seg mot venstre.
+Klikk på det grå kvadratet. Velg "gallery" øverst på midten av skjermen og legg merke til at noen av bildene har små filmruter nederst. Hold musepekeren over bildene for å se animasjonen. Finn spillfiguren din og klikk på animasjonen der figuren beveger seg mot venstre.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
@@ -399,8 +400,8 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Steg 8
-Gjenta steg 5 til 8 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms og slå på ``||Animation.loop||``.
-I det siste gapet i ``||Logic.if-then-else||``-blokken setter du inn en ``||Sprites.set mySprite image to||``-blokk og velg bildet der spillfiguren står vendt mot skjermen.
+Gjenta steg 5 til 7 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms og slå på ``||Animation.loop||``.
+I det siste gapet i ``||Logic.if then else||``-blokken setter du inn en ``||Sprites.set mySprite image to||``-blokk og velg bildet der spillfiguren står vendt mot skjermen.
 ```blocks
 let mySprite: Sprite = null 
 game.onUpdateInterval(300, function () {

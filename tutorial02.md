@@ -133,18 +133,18 @@ info.startCountdown(10)
 
 ```
 # Kodekraft: lag et energispill
-## introduksjon
-### introduksjon @unplugged
+## Introduksjon
+### Introduksjon @unplugged
 
 Vi starter med første versjon av spillet, bortsett fra en viktig ting: 
-nå skal energien fordeles urettferdig på to land, sånn som i den virkelige 
+Nå skal energien fordeles urettferdig på to land, sånn som i den virkelige 
 verden. Det ene landet skal få mye energi, mens det andre landet skal få lite energi.
 
-### Steg 2
+### Steg 1
 Vi begynner med å plassere energien slik at det er størst sannsynlighet 
 for at den havner i det sandfargede området. 
-Inn i  ``||loops.Repeat||``-løkken legger vi inn en 
- ``||Logic:if true then else ||`` - blokk fra ``||Logic.Logic||`` menyen. 
+Inn i  ``||Loops.repeat||``-løkken legger vi inn en 
+ ``||Logic:if true then else ||``-blokk fra ``||Logic.Logic||``-menyen. 
  Legg den inn under ``||variables. set energi to..||``
 
 Tips: For å flytte en blokk holder du inne Ctrl samtidig som du tar tak 

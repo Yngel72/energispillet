@@ -185,7 +185,7 @@ info.startCountdown(10)
 For å gjøre spillet ditt litt mer utfordrende, kan du legge til en fiende eller fler. Klikk "OK" for å lære hvordan. 
 
 ### Steg 1
-Begynn med å hente en ``||sprite.set mySprite to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figure enn spillerfiguren din. DU SKAL IKKE HENTE EN NY ``||Loops.on start||``-LØKKE. BRUK DEN DU ALLEREDE HAR KODEN DIN I!
+Begynn med å hente en ``||sprite.set mySprite2 to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figur enn spillerfiguren din. DU SKAL IKKE HENTE EN NY ``||Loops.on start||``-LØKKE. BRUK DEN DU ALLEREDE HAR KODEN DIN I!
 
 ```blocks
 let mySprite2 = sprites.create(img`
@@ -234,7 +234,7 @@ let mySprite2 = sprites.create(img`
 ```
 
 ### Steg 3
-Plasser den nye fienden på et tilfeldig sted ved å hente en ``||Scene.place mysprite2 on top of random||``-blokk fra ``||Scene.Scene||``-menyen og plasser den under den nye ``||Variables.mySprite2||``-blokken. Klikk på det grå kvadratet for å velge hvilken type tile fienden skal oppstå på.
+Plasser den nye fienden på et tilfeldig sted ved å hente en ``||Scene.place mysprite on top of random||``-blokk fra ``||Scene.Scene||``-menyen og plasser den under den nye ``||Variables.mySprite2||``-blokken. Endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``. Klikk på det grå kvadratet for å velge hvilken type flis (tile) fienden skal oppstå på.
 
 ```blocks
 let mySprite2 = sprites.create(img`
@@ -259,7 +259,7 @@ tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
 ```
 
 ### Steg 4
-Nå skal vi få fienden til å bevege seg av seg selv. Det gjør vi ved å gi den nye spriten fart i en bestemt xy-retning. Hent en ``||Sprites.set mysprite2 velocity to vx vy||``-blokk fra ``||Sprites.Sprites||`` menyen og plasser den under de to nye blokkene. Du kan endre farten til fienden ved å endre på de to tallene i den nye blokken.
+Nå skal vi få fienden til å bevege seg av seg selv. Det gjør vi ved å gi den nye spriten fart i en bestemt xy-retning. Hent en ``||Sprites.set mysprite velocity to vx vy||``-blokk fra ``||Sprites.Sprites||``-menyen og plasser den under de to nye blokkene. Endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``. Du kan endre farten til fienden ved å endre på de to tallene i den nye blokken.
 
 ```blocks
 let mySprite2 = sprites.create(img`
@@ -310,7 +310,7 @@ mySprite2.setVelocity(50, 50)
 mySprite2.setBounceOnWall(true)
 ```
 ### Steg 6
-Nå må du bestemme hva som skal skje når fienden finner energi på kartet. Da trenger du en ``||Sprites.on sprite of kind player overlaps othersprite of kind||``-blokk fra ``||Sprites.Sprites||``-menyen. Hent en!
+Nå må du bestemme hva som skal skje når fienden finner energi på kartet. Da trenger du en ``||Sprites.overlap||``-blokk fra ``||Sprites.Sprites||``-menyen. Hent en!
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
@@ -318,7 +318,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
 })
 ```
 ### Steg 7
-Kanskje fienden skal få samle sin egen energi? I så fall må du lage ``||Sprites.overlap||``-blokker for hver energitype i spillet. Du kan kopiere de du allerede har laget og bytte ut``||Info.change score by||``-blokkene med ``||Info.change player 2 score by 1||``-blokker fra ``||Info.Info||``-menyen og endre ``||Sprites.Kind||`` i ``||Sprites.overlap||``-blokken fra ``||Sprites.Player||`` til ``||Sprites.Enemy||``. Du kan gjøre omtrent det samme for alle energitypene. Husk at du må klikke og dra ``||Variables.othersprite||``-ovalen inn i ``||Sprites.destroy||``-blokken for at dette skal funke om du bruker en ny ``||Sprites.destroy||``-blokk.
+Kanskje fienden skal få samle sin egen energi? I så fall må du lage ``||Sprites.overlap||``-blokker for hver energitype i spillet. Du kan kopiere de du allerede har laget og bytte ut ``||Info.change score by||``-blokkene med ``||Info.change player 2 score by 1||``-blokker fra ``||Info.Info||``-menyen og endre ``||Sprites.Player||`` til ``||Sprites.Enemy||`` i ``||Sprites.overlap||``-blokken. Du kan gjøre omtrent det samme for alle energitypene. Husk at du må klikke og dra ``||Variables.othersprite||``-variabelen inn i ``||Sprites.destroy||``-blokken for at dette skal funke om du bruker en ny ``||Sprites.destroy||``-blokk.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSprite) {
@@ -327,7 +327,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSpri
 })
 ```
 ### Steg 8
-Hva skal skje når spillfiguren din treffer fienden? Kanskje fienden er en tyv som stjeler poeng fra deg? Det er opp til deg, men du trenger i alle fall å hente en ``||Sprites.on sprite of kind overlaps othersprite...||``-blokk og endre ``||Sprites.Kind||`` til ``Sprites.Player||`` og ``||Sprites.Enemy||``. Kanskje stjeler tyven ett eller flere poeng fra deg om de tar deg?
+Hva skal skje når spillfiguren din treffer fienden? Kanskje fienden er en tyv som stjeler poeng fra deg? Det er opp til deg, men du trenger i alle fall å hente en ``||Sprites.overlap||``-blokk og endre ``||Sprites.Kind||`` til ``||Sprites.Player||`` og ``||Sprites.Enemy||``. Kanskje stjeler tyven ett eller flere poeng fra deg om de tar deg?
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     

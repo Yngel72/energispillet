@@ -185,7 +185,7 @@ info.startCountdown(10)
 Legg til lydeffekter når noe skjer i spillet. Gå videre for å lære hvordan du gjør det.
 
 ### Steg 1
-Legg til en lyd når spilleren plukker opp energi. Hent en ``||Music.play sound ba ding||``-blokk fra ``||Music.Music||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken.
+Legg til en lyd når spilleren plukker opp energi. Hent en ``||Music.play sound||``-blokk fra ``||Music.Music||``-menyen og plasser den inni ``||Sprites.overlap||``-blokken som bestemmer hva som skjer når du fanger et lyn.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -197,9 +197,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 ### Steg 2
 
-Du kan velge mellom flere lyder om du trykker på den lille pilen ved siden av der det står ``||Music.ba ding||`` i ``||Music.play sound ba ding||``-blokken. Prøv litt forskjellige og finn en du liker. Nå kan du gjenta disse stegene for de andre energitypene dine.
+Du kan velge mellom flere lyder om du trykker på den lille pilen ved siden av der det står ``||Music.ba ding||`` i ``||Music.play sound||``-blokken. Prøv litt forskjellige og finn en du liker. Nå kan du gjenta disse stegene for de andre energitypene dine.
 
 ```blocks
+namespace SpriteKind {
+    export const Fornybar = SpriteKind.create()
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Fornybar, function (sprite, otherSprite) {
     tiles.placeOnRandomTile(otherSprite, assets.tile`transparency16`)
     music.magicWand.play()

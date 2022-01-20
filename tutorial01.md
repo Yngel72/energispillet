@@ -122,8 +122,8 @@ energi = sprites.create(img`
 `, SpriteKind.Food)
 ```
 # Kodekraft: lag et energispill
-## introduksjon
-### introduksjon @unplugged
+## Introduksjon
+### Introduksjon @unplugged
 
 Lag ditt eget spill der du samler energi og teller poeng. Hvor mange poeng får du før tiden er ute?
 
@@ -254,7 +254,7 @@ energi = sprites.create(img`
 ## Plassering av sprites
 
 ### Steg 2
-Få spillfiguren til å bli plassert på tilfeldig sted på skjermen. Fra ``||Scene.Scene||``-menyen finner du ``||Scene.place mySprite on top of random...||``. Legg denne i ``||loops.on start||``, under ``||Variables.Set mySprite to...||`` og velg flis med samme bakgrunn som spillebrettet. 
+Få spillfiguren til å bli plassert på tilfeldig sted på skjermen. Fra ``||Scene.Scene||``-menyen finner du ``||Scene.place mySprite on top of random...||``-blokk. Legg denne i ``||loops.on start||``, under ``||Variables.set mySprite to...||`` og velg flis (tile) med samme bakgrunn som spillebrettet. 
 
 ```blocks
 tiles.setTilemap(tilemap`level1`)
@@ -303,7 +303,7 @@ let energi = sprites.create(img`
 
 
 ### Steg 3
-Energi-spriten (lynet) skal også plasseres på tilfeldig sted. Finn en ``||scene.place mySprite on top of random...||``-blokk og legg under ``||variables.set energi to...||``. Her må du forandre mysprite til energi og velg riktig flis. 
+Energi-spriten (lynet) skal også plasseres på tilfeldig sted. Finn en ``||Scene.place mySprite on top of random...||``-blokk og legg under ``||variables.set energi to...||``. Her må du forandre mySprite til energi og velge riktig flis (tile). 
 
 ```blocks
 tiles.setTilemap(tilemap`level1`)
@@ -407,7 +407,7 @@ for (let index = 0; index < 100; index++) {
 
 ### Steg 5
 
-Når spilleren vår treffer et lyn, vil vi at dette skal forsvinne. I ``||Sprites.Sprites||``-menyen finner du ``||Sprites.on sprite of kind player overlaps...||``. Legg denne hvor som helst på skjermen. Forandre det slik at ``||variables.otherSprite||`` er av typen ``||Sprites.food||``
+Når spilleren vår treffer et lyn, vil vi at dette skal forsvinne. I ``||Sprites.Sprites||``-menyen finner du ``||Sprites.on sprite of kind Player overlaps...||``. Legg denne hvor som helst på skjermen. Forandre det slik at ``||variables.otherSprite||`` er av typen ``||Sprites.Food||``.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -415,8 +415,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ```
 
 ### Steg 6
-Inni blokken du nettopp lagde, plasserer du først en ``||Sprites.destroy mySprite||`` blokk. 
-Klikk på variabelen ``||variables.otherSprite||`` og dra den inn der det står  ``||variables.mySprite||``.
+Inni blokken du nettopp lagde, plasserer du først en ``||Sprites.destroy mySprite||``-blokk. 
+Klikk på variabelen ``||Variables.otherSprite||`` og dra den inn der det står  ``||Variables.mySprite||``.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {

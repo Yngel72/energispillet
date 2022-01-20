@@ -191,7 +191,7 @@ info.player2.setLife(3)
 ```
 
 ### Steg 2
-Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.on sprite of kind player overlaps otherSprite of kind Food||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
+Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.overlap||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -201,9 +201,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ```
 
 ### Steg 3
-I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.on sprite of kind player overlaps otherSprite of kind [EnergyKind]||``-blokker som representerer fossile energikilder.Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
+I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.overlap||``-blokker som representerer fossile energikilder. Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
 
 ```blocks
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeScoreBy(1)
