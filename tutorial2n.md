@@ -290,7 +290,7 @@ game.onUpdateInterval(300, function () {
 })
 ```
 ### Steg 6
-Endre der det står 500 ms til 100 ms i ``||Animation.animate mySprite||``-blokken og klikk på den lille knappen nederst i blokken slik at det står ``||Animation.loop ON||``.
+Endre der det står 500 ms til 100 ms i ``||Animation.animate mySprite||``-blokken og pass på at det står ``||Animation.loop OFF||`` nederst i blokken.
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
@@ -315,7 +315,7 @@ game.onUpdateInterval(300, function () {
             . . . . . . . . . . . . . . . . 
             `],
         100,
-        true
+        false
         )
     } else if (false) {
         
@@ -387,7 +387,7 @@ game.onUpdateInterval(300, function () {
             . . . f f f . . . f f . . . 
             `],
         100,
-        true
+        false
         )
     } else if (false) {
         
@@ -400,7 +400,7 @@ game.onUpdateInterval(300, function () {
     }
 ```
 ### Steg 8
-Gjenta steg 5 til 7 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms og slå på ``||Animation.loop||``.
+Gjenta steg 5 til 7 for de tre andre retningene. Husk å velge riktig animasjon og å sette tiden til 100 ms.
 I det siste gapet i ``||Logic.if then else||``-blokken setter du inn en ``||Sprites.set mySprite image to||``-blokk og velg bildet der spillfiguren står vendt mot skjermen.
 ```blocks
 let mySprite: Sprite = null 
@@ -461,7 +461,7 @@ game.onUpdateInterval(300, function () {
             . . . f f f . . . f f . . . 
             `],
         100,
-        true
+        false
         )
     } else if (controller.up.isPressed()) {
         animation.runImageAnimation(
@@ -519,7 +519,7 @@ game.onUpdateInterval(300, function () {
             . . . . . . . . f f f . . . 
             `],
         100,
-        true
+        false
         )
     } else if (controller.right.isPressed()) {
         animation.runImageAnimation(
@@ -577,7 +577,7 @@ game.onUpdateInterval(300, function () {
             . . . . . f f f . . . . . . 
             `],
         100,
-        true
+        false
         )
     } else if (controller.down.isPressed()) {
         animation.runImageAnimation(
@@ -635,7 +635,7 @@ game.onUpdateInterval(300, function () {
             . . . . . . . . f f f . . . 
             `],
         100,
-        true
+        false
         )
     } else {
         mySprite.setImage(img`
