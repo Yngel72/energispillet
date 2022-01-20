@@ -243,7 +243,7 @@ for (let index = 0; index < 100; index++) {
 ### Steg 4
 Nå skal det være 80 % sannsynlighet for at energien havner i landet med 
 sandfarge. Flytt ``||scene.place energi on top of random ||`` inn i den 
-øverste av de ledige plassene i ``|| logic. if else||`` blokken. 
+øverste av de ledige plassene i ``|| logic.if else||``-blokken. 
 
 ```blocks
     
@@ -378,8 +378,8 @@ if (Math.percentChance(20)) {
 
 ### Steg 8
 Til slutt skal vi få med at du må ha 20 poeng eller mer for å vinne spillet.
-Begynn med å legge inn  ``||info. onCountdownEnd||``  fra ``||info.info||``-menyen. 
-Legg inn en ``||logic.if true then else||``. 
+Begynn med å legge inn  ``||info. on countdown end||``  fra ``||Info.Info||``-menyen. 
+Legg inn en ``||logic.if true then else||``-blokk. 
 
 ```blocks
 info.onCountdownEnd(function () {
@@ -391,12 +391,12 @@ info.onCountdownEnd(function () {
 ```
 
 ### Steg 9
-Der hvor det står ``||logic.true||`` skal vi nå sammenligne to tall. 
-I ``||logic.logic||`` menyen finner du ``||logic. 0 < 0||``, denne 
-legges inn på ``||logic.true||``
+Der hvor det står ``||Logic.true||`` skal vi nå sammenligne to tall. 
+I ``||Logic.Logic||``-menyen finner du ``||logic. 0 < 0||``, denne 
+legges inn der det står ``||logic.true||``.
 
-Vi henter vairabelen ``||info.score||`` fra ``||info.info||`` menyen og 
-legger denne inn som første tall i ``||logic. 0 < 0||``- blokken. 
+Vi henter vairabelen ``||Info.score||`` fra ``||Info.Info||``-menyen og 
+legger denne inn som første tall i ``||logic. 0 < 0||``-blokken. 
 Den andre 0-en endres til 20.
 
 ```blocks
@@ -409,11 +409,11 @@ info.onCountdownEnd(function () {
 
 ```
 ### Steg 10
-Nå gjenstår det bare å hente to ``||game.game over||``-blokker 
-fra ``||game.game||``-menyen. Disse legges inn under ``||logic.if||`` 
+Nå gjenstår det bare å hente to ``||Game.game over||``-blokker 
+fra ``||Game.Game||``-menyen. Disse legges inn under ``||logic.if||`` 
 og ``||logic.else||``. 
 
-Hvilken skal endres til ``||game.win||`` og hvilken til ``||game.lose||`` ? 
+Hvilken skal endres til ``||game.WIN||`` og hvilken til ``||game.LOSE||`` ? 
 
 ```blocks
 info.onCountdownEnd(function () {

@@ -233,7 +233,7 @@ game.onUpdateInterval(300, function () {
 
 ### Steg 4
 Nå skal vi få figuren til å gå til venstre. 
-Hent en ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-menyen og plasser den der det står "true" i ``||Logic.if then else||``-blokken. Trykk på den lille pilen til høyre for "A" og velg "left" fra menyen som dukker opp.
+Hent en ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-menyen og plasser den der det står ``||Logic.true||`` i ``||Logic.if then else||``-blokken. Trykk på den lille pilen til høyre for "A" og velg "left" fra menyen som dukker opp.
 
 ```blocks
 game.onUpdateInterval(300, function () {
