@@ -309,7 +309,7 @@ info.startCountdown(10)
 
 ### Steg 4
 Vi vil at ``||Sprites.havvind||`` skal dukke opp ute i havet. Hent en ``||scene.place energy on top of random ||``-blokk fra 
-``||Scene.scene||``-menyen og plasser den inni ``||Loops.repeat||``-blokken. Endre ``||Sprites.mySprite2||`` til ``||Sprites.havvind||`` og la det grå kvadratet være tomt. Når vi ikke definerer en bestemt type tile, vil den nye energitypen dukke opp der det ikke er lagt noen tiles på kartet, altså ute i havet.
+``||Scene.scene||``-menyen og plasser den inni ``||Loops.repeat||``-blokken. Endre ``||Sprites.mySprite2||`` til ``||Sprites.havvind||`` og la det grå kvadratet være tomt. Når vi ikke definerer en bestemt type flis (tile), vil den nye energitypen dukke opp der det ikke er lagt noen fliser på kartet, altså ute i havet.
 
 ```blocks
 

@@ -211,7 +211,7 @@ game.onUpdateInterval(300, function () {
 
 
 ### Steg 3
-Trykk på det lille plusstegnet nede i venstre hjørne av ``||Logic.if then else||``-blokken til du har fem gap i blokken. 
+Trykk på det lille plusstegnet nede i venstre hjørne av ``||Logic.if then else||``-blokken til du har fem gap i blokken. Om du skulle trykke for mange ganger kan du fjerne gap ved å trykke på "-". 
 Nå har du det du trenger for å få figuren til å bevege seg ulikt for hver bevegelsesretning.
 
 ```blocks
@@ -232,7 +232,7 @@ game.onUpdateInterval(300, function () {
 ```
 
 ### Steg 4
-Nå skal vi få figuren til å gå til venstre. 
+Nå skal vi få figuren til å bevege seg når går til venstre. 
 Hent en ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-menyen og plasser den der det står ``||Logic.true||`` i ``||Logic.if then else||``-blokken. Trykk på den lille pilen til høyre for "A" og velg "left" fra menyen som dukker opp.
 
 ```blocks

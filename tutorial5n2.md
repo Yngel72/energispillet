@@ -184,20 +184,20 @@ info.startCountdown(10)
 Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten.
 
 ### Steg 1
-La oss først legge til en fossil energikilde, for eksempel kull. Hent en ``||Loops.repeat 4 times||``-blokk fra ``||Loops.Loops||``-menyen og plasser den i hovedkoden din, under de andre ``||Loops.repeat||``-blokkene.
+La oss først legge til en fossil energikilde, for eksempel kull. Hent en ``||Loops.repeat 4 times||``-blokk fra ``||Loops.Loops||``-menyen og plasser den i hovedkoden din, under de andre ``||Loops.repeat||``-blokkene. Skriv 100 der det står 4.
 ```block
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
 	
 }
 ```
 ### Steg 2
-Hent en ``||Variables.set mySprite2 to||`` blokk fra ``||Sprites.Sprites||``-menyen. Lag en ny variabel som heter ``||Variables.kull||`` ved å trykke der det står ``||Variables.mySprite2||`` og lag en ny variabeltype som heter ``||Variables.Fossil||`` der det står ``||variables.Player||``. Klikk på det grå kvadratet og tegn en kullbit.
+Hent en ``||Variables.set mySprite2 to||`` blokk fra ``||Sprites.Sprites||``-menyen. Lag en ny variabel som heter ``||Variables.kull||`` ved å trykke der det står ``||Variables.mySprite2||`` og lag en ny variabeltype (Kind) som heter ``||Sprites.Fossil||`` der det står ``||Sprites.Player||``. Klikk på det grå kvadratet og tegn en kullbit.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
 let kull: Sprite = null
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -219,13 +219,13 @@ for (let index = 0; index < 4; index++) {
 }
 ```
 ### Steg 3
-Hent en ``||Logic.if then else||``-blokk fra ``||Logic.Logic||``-menyen og plasser den inni ``||Loops.repeat||``-blokken du nettopp hentet. Skriv 100 der det står 4.
+Hent en ``||Logic.if then else||``-blokk fra ``||Logic.Logic||``-menyen og plasser den inni ``||Loops.repeat||``-blokken du nettopp hentet.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
 let kull: Sprite = null
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -258,7 +258,7 @@ namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
 let kull: Sprite = null
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -291,7 +291,7 @@ namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
 let kull: Sprite = null
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -324,7 +324,7 @@ namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
 let kull: Sprite = null
-for (let index = 0; index < 4; index++) {
+for (let index = 0; index < 100; index++) {
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 

@@ -183,7 +183,7 @@ info.startCountdown(10)
 Nå skal vi lage en usynlig grense som bare kan krysses ved en kontrollpost. Da blir det vanskeligere for rivaler å stjele ressurser fra ditt område, men kanskje det gjør spillet vanskeligere for deg også?
 
 ### Steg 1
-Først må vi sette opp en kontrollpost på grensen. Kontrollposten må være en egen ``||Scene.tile||``. Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en ``||Scene.tile||`` du synes passer som kontrollpost og plasser den der de to øyene møtes.
+Først må vi sette opp en kontrollpost på grensen. Kontrollposten må være en egen flis (tile). Klikk på kartikonet i ``||Scene.set tilemap to||``, finn en flis du synes passer som kontrollpost og plasser den der de to øyene møtes.
 ![Grensevakt](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/grensevakt1.jpg)
 ### Steg 2
 Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på vegg-ikonet under det lille bildet av kartet på venstre side av skjermen. "Draw walls" kommer opp under ikonet når du peker på det.
@@ -192,12 +192,12 @@ Klikk på kartikonet i ``||Scene.set tilemap to||``-blokken på nytt. Klikk på 
 Tegn en vegg som deler kartet i to mellom de to øyene. Pass på at grensen går helt ut i kanten av bildet og at det ikke er hull i veggen andre steder enn ved kontrollposten.
 ![Grensemur](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Grensevegg4.gif)
 ### Steg 4
-Legg til en grensevakt på kontrollposten. Hent en ``||Sprites.set mySprite to sprite of kind||``-blokk fra ``||Sprites.Sprites||``-menyen og plasser den i hovedkoden din. Klikk på det grå feltet og velg et bilde. Klikk på feltet ``||Variables.mySprite||`` og velg "New variable". Kall den nye variabelen for "vakt". Endre typen (Kind) til en ny type sprite. Kall den "grensevakt" eller noe annet som gir mening.
+Legg til en grensevakt på kontrollposten. Hent en ``||Sprites.set mySprite to sprite of kind||``-blokk fra ``||Sprites.Sprites||``-menyen og plasser den i hovedkoden din. Klikk på det grå feltet og velg et bilde. Klikk på feltet ``||Variables.mySprite||`` og velg ``||Variables.New variable||``. Kall den nye variabelen for ``||Variables.grensevakt||``. Endre typen (Kind) til en ny type sprite. Kall den ``||Sprites.Vakt||`` eller noe annet som gir mening.
 ```block
 namespace SpriteKind {
-    export const Grensevakt = SpriteKind.create()
+    export const Vakt = SpriteKind.create()
 }
-let vakt = sprites.create(img`
+let grensevakt = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
     . . . f f f 2 2 2 2 f f f . . . 
@@ -214,11 +214,11 @@ let vakt = sprites.create(img`
     . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
-    `, SpriteKind.Grensevakt)
+    `, SpriteKind.Vakt)
 
 ```
 ### Steg 5
-Plasser vakten ved å legge til en ``||Scene.place mySprite on top of random tile||``-blokk fra ``||Scene.Scene||``-menyen under den nye sprite-blokken din og velg ``||Variables.vakt||`` i stedet for ``||Variables.mySprite||`` og velg kontrollpost-tilen som det den skal plasseres på.
+Plasser grensevakten ved å legge til en ``||Scene.place mySprite on top of random tile||``-blokk fra ``||Scene.Scene||``-menyen under den nye sprite-blokken din og velg ``||Variables.grensevakt||`` i stedet for ``||Variables.mySprite||`` og velg kontrollpostflisen som det den skal plasseres på.
 ```block
 namespace myTiles {
     //% blockIdentity=images._tile
@@ -242,7 +242,7 @@ namespace myTiles {
     `
 }
 namespace SpriteKind {
-    export const Grensevakt = SpriteKind.create()
+    export const Vakt = SpriteKind.create()
 }
 let vakt = sprites.create(img`
     . . . . . . f f f f . . . . . . 
@@ -261,19 +261,19 @@ let vakt = sprites.create(img`
     . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
-    `, SpriteKind.Grensevakt)
-tiles.placeOnRandomTile(vakt, sprites.builtin.forestTiles0)
+    `, SpriteKind.Vakt)
+tiles.placeOnRandomTile(grensevakt, sprites.builtin.forestTiles0)
 ```
 ### Steg 6
  Hva skal skje når spilleren treffer grensevakten?
-Plasser vakten på feltet mellom de to områdene og hent inn en ``||Sprites.on sprite of kind Player overlaps sprite of kind||``-blokk, slik at du kan kontrollere hva som skal skje hvis spilleren overlapper med vakten.
+Plasser vakten på feltet mellom de to områdene og hent inn en ``||Sprites.overlap||``-blokk, slik at du kan kontrollere hva som skal skje hvis spilleren overlapper med vakten.
 
-Kanskje vakten slenger spilleren tilbake til et felt inne på området sitt? Kanskje spilleren kan komme forbi hvis den har klart å samle nok energi først? Går det an å bestikke vakten med litt energi, kanskje? Eller kan spilleren klare å snike seg forbi på et vis?
+Kanskje vakten slenger spilleren tilbake til et tilfeldig felt inne på området sitt? Kanskje spilleren kan komme forbi hvis den har klart å samle nok energi først? Går det an å bestikke vakten med litt energi, kanskje? Eller kan spilleren klare å snike seg forbi på et vis?
 ```blocks
 namespace SpriteKind {
-    export const Grensevakt = SpriteKind.create()
+    export const Vakt = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Grensevakt, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Vakt, function (sprite, otherSprite) {
     if (true) {
     	
     } else {
