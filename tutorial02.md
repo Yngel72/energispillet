@@ -243,7 +243,7 @@ for (let index = 0; index < 100; index++) {
 ### Steg 4
 Nå skal det være 80 % sannsynlighet for at energien havner i landet med 
 sandfarge. Flytt ``||scene.place energi on top of random ||`` inn i den 
-øverste av de ledige plassene i ``|| logic.if else||``-blokken. 
+øverste av de ledige plassene i ``|| logic.if then else||``-blokken. 
 
 ```blocks
     

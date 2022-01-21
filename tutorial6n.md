@@ -193,7 +193,7 @@ Tegn en vegg som deler kartet i to mellom de to øyene. Pass på at grensen går
 ![Grensemur](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/Grensevegg4.gif)
 ### Steg 4
 Legg til en grensevakt på kontrollposten. Hent en ``||Sprites.set mySprite to sprite of kind||``-blokk fra ``||Sprites.Sprites||``-menyen og plasser den i hovedkoden din. Klikk på det grå feltet og velg et bilde. Klikk på feltet ``||Variables.mySprite||`` og velg "New variable". Kall den nye variabelen for "vakt". Endre typen (Kind) til en ny type sprite. Kall den "grensevakt" eller noe annet som gir mening.
-```blocks
+```block
 namespace SpriteKind {
     export const Grensevakt = SpriteKind.create()
 }
@@ -219,7 +219,28 @@ let vakt = sprites.create(img`
 ```
 ### Steg 5
 Plasser vakten ved å legge til en ``||Scene.place mySprite on top of random tile||``-blokk fra ``||Scene.Scene||``-menyen under den nye sprite-blokken din og velg ``||Variables.vakt||`` i stedet for ``||Variables.mySprite||`` og velg kontrollpost-tilen som det den skal plasseres på.
-```blocks
+```block
+namespace myTiles {
+    //% blockIdentity=images._tile
+    export const tile0 = img`
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+    `
+}
 namespace SpriteKind {
     export const Grensevakt = SpriteKind.create()
 }

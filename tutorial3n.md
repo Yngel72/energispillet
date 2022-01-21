@@ -1,5 +1,6 @@
 ### @activities true
 
+
 ```template
 
 namespace SpriteKind {
@@ -185,9 +186,9 @@ info.startCountdown(10)
 For å gjøre spillet ditt litt mer utfordrende, kan du legge til en fiende eller fler. Klikk "OK" for å lære hvordan. 
 
 ### Steg 1
-Begynn med å hente en ``||sprite.set mySprite2 to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figur enn spillerfiguren din. DU SKAL IKKE HENTE EN NY ``||Loops.on start||``-LØKKE. BRUK DEN DU ALLEREDE HAR KODEN DIN I!
+Begynn med å hente en ``||sprite.set mySprite2 to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figur enn spillerfiguren din.
 
-```blocks
+```block
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -212,7 +213,7 @@ let mySprite2 = sprites.create(img`
 
 Siden den nye figuren din er en fiende, må du endre typen, altså ``||Sprites.Kind||`` fra ``||Sprites.Player||`` til ``||Sprites.Enemy||``.
 
-```blocks
+```block
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -236,7 +237,7 @@ let mySprite2 = sprites.create(img`
 ### Steg 3
 Plasser den nye fienden på et tilfeldig sted ved å hente en ``||Scene.place mysprite on top of random||``-blokk fra ``||Scene.Scene||``-menyen og plasser den under den nye ``||Variables.mySprite2||``-blokken. Endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``. Klikk på det grå kvadratet for å velge hvilken type flis (tile) fienden skal oppstå på.
 
-```blocks
+```block
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -261,7 +262,7 @@ tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
 ### Steg 4
 Nå skal vi få fienden til å bevege seg av seg selv. Det gjør vi ved å gi den nye spriten fart i en bestemt xy-retning. Hent en ``||Sprites.set mysprite velocity to vx vy||``-blokk fra ``||Sprites.Sprites||``-menyen og plasser den under de to nye blokkene. Endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``. Du kan endre farten til fienden ved å endre på de to tallene i den nye blokken.
 
-```blocks
+```block
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -286,7 +287,7 @@ mySprite2.setVelocity(50, 50)
 
 ### Steg 5
 For at ikke fienden bare skal forsvinne ut av spillområdet skal vi få den til å sprette når den treffer kanten av kartet. Hent en ``||Sprites.set mySprite bounce on wall||``-blokk fra ``||Sprites.Sprites||``-menyen og endre ``||Variables.mySprite||`` til ``||Variables.mySprite2||``.
-```blocks
+```block
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -350,7 +351,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 ```
 ### Steg 11
 Og det var det! Nå har du laget en tyv til spillet ditt! Om du vil gjøre det enda mer interessant, kan du jo la tyven være en skikkelig skurk som tar liv fra deg også. I så fall må du utforske hvordan du kan bruke ``||Info.set life to||``-blokken i hovedkoden din og ``||Info.change life by -1||``-blokker inni en ``||Sprites.overlap||``-blokk. Kanskje du mister et liv når du møter en skurk? Du kan se et lite eksempel i hintet her.
-```blocks
+```block
 namespace SpriteKind {
     export const Energy = SpriteKind.create()
 }

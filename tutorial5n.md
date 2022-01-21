@@ -184,9 +184,9 @@ info.startCountdown(10)
 Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten. Denne tutorialen forutsetter at du har flere typer energikilder i spillet ditt. Om du ikke allerede har lagt til flere energityper i spillet ditt, gå tilbake og gjør den tutorialen først. Når det er gjort, klikk OK.
 
 ### Steg 1
-Vi lar planeten selv være spiller nummer 2, slik at vi kan la innsamling av noen typer energi føre til at planeten mister liv. Hent en ``||Info.set player2 life to 3||``-blokk fra ``||Info.Info||``-menyen og plasser den under resten av koden din inni hoved-``||Loops.on start||``-løkken. IKKE LAG EN NY ``||Loops.on start||``-LØKKE! Bare sett den nye blokken inn sammen med den andre koden din, i bunnen av løkken. Du kan gi planeten mer liv om du synes 3 er litt lite.
+Vi lar planeten selv være spiller nummer 2, slik at vi kan la innsamling av noen typer energi føre til at planeten mister liv. Hent en ``||Info.set player2 life to 3||``-blokk fra ``||Info.Info||``-menyen og plasser den under resten av koden din inni hoved-``||Loops.on start||``-løkken, under resten av koden din. Du kan gi planeten mer liv om du synes 3 er litt lite.
 
-```blocks
+```block
 info.player2.setLife(3)
 ```
 
@@ -221,7 +221,11 @@ info.onLifeZero(function () {
     game.over(false)
 })
 ```
-
+```ghost
+music.baDing.play()
+scene.cameraShake(4, 500)
+effects.confetti.startScreenEffect()
+```
 ### Steg 5
 Det var alt om miljøpåvirkning.
 Her er en ekstra liten utfordring:
