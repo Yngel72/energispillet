@@ -318,7 +318,7 @@ for (let index = 0; index < 4; index++) {
 }
 ```
 ### Steg 6
-Hent en ny ``||Scene.place mySprite on random||``-blokk fra ``||Scene.Scene||``-menyen. Endre ``||Variables.mySprite2||`` til ``||Variables.kull||``, klikk på det grå kvadratet og velg sandfarget flis (tile). Nå har du fordelt kullressurser på begge øyene.
+Hent en ny ``||Scene.place mySprite on random||``-blokk fra ``||Scene.Scene||``-menyen. Endre ``||Variables.mySprite2||`` til ``||Variables.kull||``, klikk på det grå kvadratet og velg sandfarget flis (tile). Nå har du fordelt kullressurser på begge øyene. Om du vil kan du legge til andre fossile energikilder med samme fremgangsmåte.
 ```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
