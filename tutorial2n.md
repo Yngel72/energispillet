@@ -185,7 +185,7 @@ info.startCountdown(10)
 ## Introduksjon
 ### Introduksjon @unplugged
 
-Ved hjelp av litt ekstra kode kan du gjøre spillfiguren din levende. Klikk deg videre for å lære hvordan! 
+Ved hjelp av litt ekstra kode kan du gjøre spillfiguren din levende. La oss sette igang! 
 
 ### Steg 1
 For at animasjonen skal spilles av riktig, må vi tvinge spillet til å oppdateres omtrent tre ganger i sekundet.

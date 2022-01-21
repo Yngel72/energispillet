@@ -181,30 +181,186 @@ info.startCountdown(10)
 # Miljøpåvirkning - Redd planeten!
 ## Introduksjon
 ### Introduksjon @unplugged
-Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten.
-
+Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten. Denne tutorialen forutsetter at du har flere typer energikilder i spillet ditt. Om du ikke allerede har lagt til flere energityper i spillet ditt, gå tilbake og gjør den tutorialen først. Når det er gjort, klikk OK.
 
 ### Steg 1
+La oss først legge til en fossil energikilde, for eksempel kull. Hent en ``||Loops.repeat 4 times||``-blokk fra ``||Loops.Loops||``-menyen og plasser den i hovedkoden din, under de andre ``||Loops.repeat||``-blokkene.
+```block
+for (let index = 0; index < 4; index++) {
+	
+}
+```
+### Steg 2
+Hent en ``||Variables.set mySprite2 to||`` blokk fra ``||Sprites.Sprites||``-menyen. Lag en ny variabel som heter ``||Variables.kull||`` ved å trykke der det står ``||Variables.mySprite2||`` og lag en ny variabeltype som heter ``||Variables.Fossil||`` der det står ``||variables.Player||``. Klikk på det grå kvadratet og tegn en kullbit.
+```block
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
+let kull: Sprite = null
+for (let index = 0; index < 4; index++) {
+    kull = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . f f f f f f f 8 f f f . . . . 
+        f f f f f f f f 1 8 f f . . . . 
+        f f f f f f f f f 1 f f f . . . 
+        f f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Fossil)
+}
+```
+### Steg 3
+Hent en ``||Logic.if then else||``-blokk fra ``||Logic.Logic||``-menyen og plasser den inni ``||Loops.repeat||``-blokken du nettopp hentet. Skriv 100 der det står 4.
+```block
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
+let kull: Sprite = null
+for (let index = 0; index < 4; index++) {
+    kull = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . f f f f f f f 8 f f f . . . . 
+        f f f f f f f f 1 8 f f . . . . 
+        f f f f f f f f f 1 f f f . . . 
+        f f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Fossil)
+    if (true) {
+    	
+    } else {
+    	
+    }
+}
+```
+### Steg 4
+Hent en liten ``||Math.0 % chance||``-blokk fra ``||Math.Math||``-menyen og plasser den der det står ``||Logic.true||`` i den siste blokken du hentet. Skriv inn 80 der det står 0.
+```block
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
+let kull: Sprite = null
+for (let index = 0; index < 4; index++) {
+    kull = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . f f f f f f f 8 f f f . . . . 
+        f f f f f f f f 1 8 f f . . . . 
+        f f f f f f f f f 1 f f f . . . 
+        f f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Fossil)
+    if (Math.percentChance(80)) {
+    	
+    } else {
+    	
+    }
+}
+```
+### Steg 5
+Hent en ``||Scene.place mySprite on random||``-blokk fra ``||Scene.Scene||``-menyen. Endre ``||Variables.mySprite2||`` til ``||Variables.kull||``, klikk på det grå kvadratet og velg grønn flis (tile).
+```block
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
+let kull: Sprite = null
+for (let index = 0; index < 4; index++) {
+    kull = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . f f f f f f f 8 f f f . . . . 
+        f f f f f f f f 1 8 f f . . . . 
+        f f f f f f f f f 1 f f f . . . 
+        f f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Fossil)
+    if (Math.percentChance(80)) {
+        tiles.placeOnRandomTile(kull, sprites.castle.tileGrass1)
+    } else {
+    	
+    }
+}
+```
+### Steg 6
+Hent en ny ``||Scene.place mySprite on random||``-blokk fra ``||Scene.Scene||``-menyen. Endre ``||Variables.mySprite2||`` til ``||Variables.kull||``, klikk på det grå kvadratet og velg sandfarget flis (tile). Nå har du fordelt kullressurser på begge øyene.
+```block
+namespace SpriteKind {
+    export const Fossil = SpriteKind.create()
+}
+let kull: Sprite = null
+for (let index = 0; index < 4; index++) {
+    kull = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f . . . . . . . 
+        . . . f f f f f f f . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . f f f f f f f 8 f f f . . . . 
+        f f f f f f f f 1 8 f f . . . . 
+        f f f f f f f f f 1 f f f . . . 
+        f f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . . . f f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . f f f f f f f . . . . 
+        . . . . . . . f f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Fossil)
+    if (Math.percentChance(80)) {
+        tiles.placeOnRandomTile(kull, sprites.castle.tileGrass1)
+    } else {
+        tiles.placeOnRandomTile(kull, sprites.castle.tilePath5)
+    }
+}
+```
+### Steg 7
 Vi lar planeten selv være spiller nummer 2, slik at vi kan la innsamling av noen typer energi føre til at planeten mister liv. Hent en ``||Info.set player2 life to 3||``-blokk fra ``||Info.Info||``-menyen og plasser den under resten av koden din inni hoved-``||Loops.on start||``-løkken, under resten av koden din. Du kan gi planeten mer liv om du synes 3 er litt lite.
 
 ```block
 info.player2.setLife(3)
 ```
 
-### Steg 2
-Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.overlap||``-blokken som styrer hva som skjer når spilleren plukker opp et lyn. Nå representerer lynene fossile drivstoff som påvirker miljøet negativt.
+### Steg 8
+Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menyen og plasser den inni ``||Sprites.overlap||``-blokken som styrer hva som skjer når spilleren plukker opp kull. Kull representerer fossile drivstoff som påvirker miljøet negativt.
 
-```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    otherSprite.destroy()
-    info.changeScoreBy(1)
-    info.player2.changeLifeBy(-1)
-```
-
-### Steg 3
-I ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.overlap||``-blokker som representerer fossile energikilder. Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
-
-```blocks
+```block
 namespace SpriteKind {
     export const Fossil = SpriteKind.create()
 }
@@ -212,9 +368,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherS
     otherSprite.destroy()
     info.changeScoreBy(1)
     info.player2.changeLifeBy(-1)
-})
 ```
-### Steg 4
+
+### Steg 9
+Om du har laget ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.overlap||``-blokker som representerer fossile energikilder. Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
+
+### Steg 10
 Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on player 2 life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)
 
 ```blocks
@@ -228,9 +387,10 @@ scene.cameraShake(4, 500)
 effects.confetti.startScreenEffect()
 game.over(false)
 ```
-### Steg 5
+### Steg 11
 Det var alt om miljøpåvirkning.
 Her er en ekstra liten utfordring:
 Noen handlinger har positiv effekt på miljøet. Hva med å tilføye noen få sprites som gir liv til planeten når du plukker dem opp? Kanskje plastsøppel i havet? Hvilke blokker kan du bruke for å få til dette?
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+

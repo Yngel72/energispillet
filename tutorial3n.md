@@ -183,7 +183,7 @@ info.startCountdown(10)
 ## Introduksjon
 ### Introduksjon @unplugged
 
-For å gjøre spillet ditt litt mer utfordrende, kan du legge til en fiende eller fler. Klikk "OK" for å lære hvordan. 
+Nå skal vi gjøre spillet litt mer utfordrende. La oss legge til en rival! 
 
 ### Steg 1
 Begynn med å hente en ``||sprite.set mySprite2 to sprite of kind||``-blokk fra ``||sprites.Sprites||``-menyen og plasser den inni ``||Loops.on start||``-løkken din, gjerne nederst, under all den andre koden. Klikk på det grå kvadratet og velg en ny spillfigur fra galleriet. Velg en annen figur enn spillerfiguren din.

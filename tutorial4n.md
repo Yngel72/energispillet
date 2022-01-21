@@ -182,7 +182,7 @@ info.startCountdown(10)
 ## Introduksjon
 ### Introduksjon @unplugged
 
-Legg til lydeffekter når noe skjer i spillet. Gå videre for å lære hvordan du gjør det.
+Et dataspill blir litt flatt og kjedelig uten lydeffekter. La oss legge til noen!
 
 ### Steg 1
 Legg til en lyd når spilleren plukker opp energi. Hent en ``||Music.play sound||``-blokk fra ``||Music.Music||``-menyen og plasser den inni ``||Sprites.overlap||``-blokken som bestemmer hva som skjer når du fanger et lyn.
