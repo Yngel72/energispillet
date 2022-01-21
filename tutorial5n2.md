@@ -181,7 +181,7 @@ info.startCountdown(10)
 # Miljøpåvirkning - Redd planeten!
 ## Introduksjon
 ### Introduksjon @unplugged
-Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten. Denne tutorialen forutsetter at du har flere typer energikilder i spillet ditt. Om du ikke allerede har lagt til flere energityper i spillet ditt, gå tilbake og gjør den tutorialen først. Når det er gjort, klikk OK.
+Hvordan påvirker forskjellige energikilder miljøet? Her er et forslag til hvordan man kan få spillet til å handle om å redde planeten.
 
 ### Steg 1
 La oss først legge til en fossil energikilde, for eksempel kull. Hent en ``||Loops.repeat 4 times||``-blokk fra ``||Loops.Loops||``-menyen og plasser den i hovedkoden din, under de andre ``||Loops.repeat||``-blokkene.
