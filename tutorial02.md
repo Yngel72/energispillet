@@ -323,6 +323,8 @@ Finn en ny ``||Logic.if true then else||``-blokk, og plasser den under
 Der det står ``||logic.true||`` skal vi som i forrige steg ha en 
 ``||math. 0% chance||``-blokk. Skriv 20 der det står 0. 
 
+Dra ``||Scene.place mySprite on top of random||`` blokken med spillefiguren inn i det øverste gapet på ``||Logic.if then else||``-blokken. (Hold inne Ctrl-knappen for å flytte en enkelt blokk.)
+
 ```block
 
 let mySprite = sprites.create(img`
@@ -349,7 +351,6 @@ if (Math.percentChance(20)) {
 } else{
 
 }
-
 ```
 
 ### Steg 7
@@ -390,7 +391,7 @@ Til slutt skal vi få med at du må ha 20 poeng eller mer for å vinne spillet.
 Begynn med å legge inn  ``||info. on countdown end||``  fra ``||Info.Info||``-menyen. 
 Legg inn en ``||logic.if true then else||``-blokk. 
 
-```blocks
+```block
 info.onCountdownEnd(function () {
     if (true) {
         

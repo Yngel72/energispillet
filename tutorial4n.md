@@ -190,6 +190,7 @@ Legg til en lyd når spilleren plukker opp energi. Hent en ``||Music.play sound|
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
+    // @highlight
     music.baDing.play()
     info.changeScoreBy(1)
 })
@@ -205,6 +206,7 @@ namespace SpriteKind {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Fornybar, function (sprite, otherSprite) {
     tiles.placeOnRandomTile(otherSprite, assets.tile`transparency16`)
+    // @highlight
     music.magicWand.play()
     info.changeScoreBy(1)
 })

@@ -262,6 +262,7 @@ let vakt = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Vakt)
+// @highlight
 tiles.placeOnRandomTile(grensevakt, sprites.builtin.forestTiles0)
 ```
 ### Steg 6
@@ -274,6 +275,7 @@ namespace SpriteKind {
     export const Vakt = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Vakt, function (sprite, otherSprite) {
+    // @highlight
     if (true) {
     	
     } else {

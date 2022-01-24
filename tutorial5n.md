@@ -198,6 +198,7 @@ Hent en ``||Info.change player2 life by -1||``-blokk fra ``||Info.Info||``-menye
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeScoreBy(1)
+    // @highlight
     info.player2.changeLifeBy(-1)
 ```
 
@@ -211,6 +212,7 @@ namespace SpriteKind {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeScoreBy(1)
+    // @highlight
     info.player2.changeLifeBy(-1)
 })
 ```

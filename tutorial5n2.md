@@ -198,6 +198,7 @@ namespace SpriteKind {
 }
 let kull: Sprite = null
 for (let index = 0; index < 100; index++) {
+    // @highlight
     kull = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -244,6 +245,7 @@ for (let index = 0; index < 100; index++) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Fossil)
+    // @highlight
     if (true) {
     	
     } else {
@@ -277,6 +279,7 @@ for (let index = 0; index < 100; index++) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Fossil)
+    // @highlight
     if (Math.percentChance(80)) {
     	
     } else {
@@ -311,6 +314,7 @@ for (let index = 0; index < 100; index++) {
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Fossil)
     if (Math.percentChance(80)) {
+        // @highlight
         tiles.placeOnRandomTile(kull, sprites.castle.tileGrass1)
     } else {
     	
@@ -346,6 +350,7 @@ for (let index = 0; index < 100; index++) {
     if (Math.percentChance(80)) {
         tiles.placeOnRandomTile(kull, sprites.castle.tileGrass1)
     } else {
+        // @highlight
         tiles.placeOnRandomTile(kull, sprites.castle.tilePath5)
     }
 }
@@ -367,11 +372,12 @@ namespace SpriteKind {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Fossil, function (sprite, otherSprite) {
     otherSprite.destroy()
     info.changeScoreBy(1)
+    // @highlight
     info.player2.changeLifeBy(-1)
 ```
 
 ### Steg 9
-Om du har laget ditt eget spill kan du gjenta Steg 2 for alle ``||Sprites.overlap||``-blokker som representerer fossile energikilder. Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
+Om du har laget ditt eget spill kan du gjenta Steg 8 for alle ``||Sprites.overlap||``-blokker som representerer fossile energikilder. Fornybare energikilder kan stå som de er, ettersom de ikke påvirker miljøet i like stor grad.
 
 ### Steg 10
 Hva skjer når planeten går tom for liv? Det sier seg kanskje selv, men du må bruke en ``||Info.on player 2 life zero||``-blokk fra ``||Info.Info||``-menyen for at noe skal skje. Du kan for eksempel sette inn lyd fra ``||Music.Music||``-menyen, animere skjermen med blokker fra ``||Scene.Scene||``-menyen, eller kanskje bare sette inn en ``||Game.game over||``-blokk fra ``||Game.Game||``-menyen? (Advarsel: ``||Game.game over||``-blokken vil gjøre du mister effekten av alle andre blokker inni ``||Info.on life zero||``-blokken.)

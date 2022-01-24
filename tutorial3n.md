@@ -214,6 +214,7 @@ let mySprite2 = sprites.create(img`
 Siden den nye figuren din er en fiende, må du endre typen, altså ``||Sprites.Kind||`` fra ``||Sprites.Player||`` til ``||Sprites.Enemy||``.
 
 ```block
+// @highlight
 let mySprite2 = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -256,6 +257,7 @@ let mySprite2 = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Enemy)
+// @highlight
 tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
 ```
 
@@ -282,6 +284,7 @@ let mySprite2 = sprites.create(img`
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Enemy)
 tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
+// @highlight
 mySprite2.setVelocity(50, 50)
 ```
 
@@ -308,6 +311,7 @@ let mySprite2 = sprites.create(img`
     `, SpriteKind.Enemy)
 tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
 mySprite2.setVelocity(50, 50)
+// @highlight
 mySprite2.setBounceOnWall(true)
 ```
 ### Steg 6
@@ -324,6 +328,7 @@ Kanskje fienden skal få samle sin egen energi? I så fall må du lage ``||Sprit
 ```blocks
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
+    // @highlight
     info.player2.changeScoreBy(1)
 })
 ```
@@ -338,6 +343,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 Her kommer nest siste hint om hvordan du lager en tyv. I dette tilfellet mister du et poeng, mens tyven får et. Hent en ``||Info.change score by 1||``-blokk fra ``||Info.Info||``-menyen, plasser den inni ``||Sprites.overlap||``-blokken din og endre 1 til -1.
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    // @highlight
     info.changeScoreBy(-1)
 })
 ```
@@ -346,6 +352,7 @@ Siden tyven stjeler poenget ditt må jo tyvens score øke tilsvarende. Hent en `
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeScoreBy(-1)
+    // @highlight
     info.player2.changeScoreBy(1)
 })
 ```
@@ -376,6 +383,7 @@ let mySprite2 = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Enemy)
+// @highlight
 info.setLife(3)
 tiles.placeOnRandomTile(mySprite2, sprites.castle.tilePath5)
 mySprite2.setVelocity(50, 50)

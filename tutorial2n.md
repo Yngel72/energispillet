@@ -201,6 +201,7 @@ Nå må vi få animasjonen til å spilles av for hver bevegelsesretning. Til det
 
 ```blocks
 game.onUpdateInterval(300, function () {
+    // @highlight
     if (true) {
 
     } else {
@@ -216,6 +217,7 @@ Nå har du det du trenger for å få figuren til å bevege seg ulikt for hver be
 
 ```blocks
 game.onUpdateInterval(300, function () {
+    // @highlight
     if (true) {
 	
 } else if (false) {
@@ -237,6 +239,7 @@ Hent en ``||Controller.is A button pressed||``-blokk fra ``||Controller||``-meny
 
 ```blocks
 game.onUpdateInterval(300, function () {
+    // @highlight
     if (controller.left.isPressed()) {
         
     } else if (false) {
@@ -255,6 +258,7 @@ Hent en ``||Animation.animate mySprite||``-blokk fra ``||Animation.Animation||``
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
+        // @highlight
         animation.runImageAnimation(
         mySprite,
         [img`
@@ -294,6 +298,7 @@ Endre der det står 500 ms til 100 ms i ``||Animation.animate mySprite||``-blokk
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
+        // @highlight
         animation.runImageAnimation(
         mySprite,
         [img`
@@ -332,6 +337,7 @@ Klikk på det grå kvadratet. Velg "gallery" øverst på midten av skjermen og l
 ```blocks
 game.onUpdateInterval(300, function () {
     if (controller.left.isPressed()) {
+        // @highlight
         animation.runImageAnimation(
         mySprite,
         [img`
@@ -638,6 +644,7 @@ game.onUpdateInterval(300, function () {
         false
         )
     } else {
+        // @highlight
         mySprite.setImage(img`
             . f f f . f f f f . f f f . 
             f f f f f c c c c f f f f f 

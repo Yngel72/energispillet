@@ -355,6 +355,7 @@ tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
 
 ### Steg 4
 Vi trenger flere energi-sprites. Bruk en ``||loops.repeat||``-løkke fra ``||loops.loops||``-menyen for å gjenta de to nederste blokkene i ``||loops.on start||`` for eksempel 100 ganger.
+Tips: Hold inne Ctrl-knappen for å flytte en og en blokk.
 
 ```blocks
 let energi: Sprite = null

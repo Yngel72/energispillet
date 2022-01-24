@@ -218,6 +218,7 @@ for (let index = 0; index < 100; index++) {
     }
     
 }
+// @highlight
 for (let index = 0; index < 200; index++) {   
 }
 info.startCountdown(10)
@@ -226,11 +227,13 @@ info.startCountdown(10)
 
 ### Steg 3
 
-Inni den nye ``||loops.repeat ||`` blokken trenger vi nå en ny ``||sprite.set mySprite to...||`` blokk fra
+Inni den nye ``||loops.repeat ||``-blokken trenger vi nå en ny ``||sprite.set mySprite to...||``-blokk fra
  ``||Sprites.Sprites||``-menyen. Klikk på ``||Variables.mySprite2||`` og lag en ny variabel. Kall den gjerne "havvind". Klikk på ``||Sprites.Player||`` og lag en ny type sprite du kan kalle "Fornybar". Klikk på det grå kvadratet og tegn den nye havvindenergien din.
 
 ```blocks
-
+namespace SpriteKind {
+    export const Fornybar = SpriteKind.create()
+}
 let energi: Sprite = null
 tiles.setTilemap(tilemap`level1`)
 scene.setBackgroundColor(9)
@@ -282,6 +285,7 @@ for (let index = 0; index < 100; index++) {
     
 }
 for (let index = 0; index < 200; index++) {
+    // @highlight
     havvind = sprites.create(img`
         . . . . . . . 1 8 8 8 1 8 8 . . 
         . . . . . . . 1 8 1 8 8 1 8 . . 
@@ -299,7 +303,7 @@ for (let index = 0; index < 200; index++) {
         . . . . . . . 1 8 8 . . 1 8 . . 
         . . . . . . . . 1 1 . 1 1 8 . . 
         . . . . . . . . . . 1 8 8 8 . . 
-        `,Fornybar)
+        `,SpriteKind.Fornybar)
        
 }
 info.startCountdown(10)
@@ -308,11 +312,13 @@ info.startCountdown(10)
 
 
 ### Steg 4
-Vi vil at ``||Sprites.havvind||`` skal dukke opp ute i havet. Hent en ``||scene.place energy on top of random ||``-blokk fra 
-``||Scene.scene||``-menyen og plasser den inni ``||Loops.repeat||``-blokken. Endre ``||Sprites.mySprite2||`` til ``||Sprites.havvind||`` og la det grå kvadratet være tomt. Når vi ikke definerer en bestemt type flis (tile), vil den nye energitypen dukke opp der det ikke er lagt noen fliser på kartet, altså ute i havet.
+Vi vil at ``||Variables.havvind||`` skal dukke opp ute i havet. Hent en ``||scene.place energy on top of random ||``-blokk fra 
+``||Scene.Scene||``-menyen og plasser den inni ``||Loops.repeat||``-blokken. Endre ``||Variables.mySprite2||`` til ``||Variables.havvind||`` og la det grå kvadratet være tomt. Når vi ikke definerer en bestemt type flis (tile), vil den nye energitypen dukke opp der det ikke er lagt noen fliser på kartet, altså ute i havet.
 
 ```blocks
-
+namespace SpriteKind {
+    export const Fornybar = SpriteKind.create()
+}
 let energi: Sprite = null
 tiles.setTilemap(tilemap`level1`)
 scene.setBackgroundColor(9)
@@ -381,7 +387,8 @@ for (let index = 0; index < 200; index++) {
         . . . . . . . 1 8 8 . . 1 8 . . 
         . . . . . . . . 1 1 . 1 1 8 . . 
         . . . . . . . . . . 1 8 8 8 . . 
-        `,Fornybar)
+        `,SpriteKind.Fornybar)
+    // @highlight
     tiles.placeOnRandomTile(havvind, assets.tile`tile0`)   
 }
 info.startCountdown(10)
@@ -392,17 +399,24 @@ info.startCountdown(10)
 Vi trenger en ny ``||Sprites.overlap||``-blokk for å fange den nye energitypen. Hent en fra ``||Sprites.Sprites||``-menyen og plasser en ``||Info.change score by 1||``-blokk fra ``||Info.Info||``-menyen inni den.
 
 ```blocks
-sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
+namespace SpriteKind {
+    export const Fornybar = SpriteKind.create()
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Fornybar, function (sprite, otherSprite) {
+    // @highlight
     info.changeScoreBy(1)
 })
 ```
 
 ### Steg 6
-Siden den nye energitypen vår er fornybar, ønsker vi ikke å fjerne ``||Sprites.havvind||`` helt når vi overlapper. I stedet for å bruke en ``||Sprites.destroy otherSprite||``-blokk skal vi bruke en ``||Scene.Place mySprite on top of random||``-blokk for å få den fornybare energien til å gjenoppstå et tilfeldig sted i havet. Husk å dra den ovale ``||Sprite.otherSprite||`` til der det står ``||Sprite.mySprite2||``, endre kind til ``||sprite.Fornybar||`` og la det grå kvadratet være som det er.
+Siden den nye energitypen vår er fornybar, ønsker vi ikke å fjerne ``||Variables.havvind||`` helt når vi overlapper. I stedet for å bruke en ``||Sprites.destroy otherSprite||``-blokk skal vi bruke en ``||Scene.Place mySprite on top of random||``-blokk for å få den fornybare energien til å gjenoppstå et tilfeldig sted i havet. Husk å dra den ovale ``||Variables.otherSprite||`` til der det står ``||Variables.mySprite||``, endre kind til ``||Sprites.Fornybar||`` og la det grå kvadratet være som det er.
 
 ```blocks
-
-sprites.onOverlap(SpriteKind.Player, Fornybar, function (sprite, otherSprite) {
+namespace SpriteKind {
+    export const Fornybar = SpriteKind.create()
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Fornybar, function (sprite, otherSprite) {
+    // @highlight
     tiles.placeOnRandomTile(otherSprite, assets.tile`tile0`)
     info.changeScoreBy(1)
 })
