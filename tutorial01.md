@@ -277,6 +277,7 @@ let mySprite = sprites.create(img`
     . . . . f f f f f f . . . . 
     . . . . f f . . f f . . . . 
     `, SpriteKind.Player)
+// @highlight
 tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
@@ -347,6 +348,7 @@ let energi = sprites.create(img`
     . . . . . f f f . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Food)
+// @highlight
 tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
 
 ```
@@ -379,6 +381,7 @@ let mySprite = sprites.create(img`
 tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
+// @highlight
 for (let index = 0; index < 100; index++) {
     energi = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -420,6 +423,7 @@ Klikk på variabelen ``||Variables.otherSprite||`` og dra den inn der det står 
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    // @highlight
     otherSprite.destroy()
 })
 ```
@@ -431,6 +435,7 @@ Vi må også telle poeng. I ``||Info.Info||``-menyen finner du ``||Info.change s
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
+    // @highlight
     info.changeScoreBy(1)
 })
 ```
@@ -487,6 +492,7 @@ for (let index = 0; index < 100; index++) {
         `, SpriteKind.Food)
     tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
 }
+// @highlight
 info.startCountdown(10)
 
 ```
