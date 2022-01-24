@@ -195,6 +195,7 @@ for (let index = 0; index < 100; index++) {
         . . . . . f f f . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Food)
+    // @highlight
     if (true) {
         
     } else {
@@ -210,7 +211,7 @@ info.startCountdown(10)
 
 Der hvor det står ``||Logic.true ||`` skal vi plassere ``||Math.0% chance ||`` 
 fra ``||Math.Math||``-menyen. Skriv 80 der hvor det står 0.
-```blocks
+```block
 for (let index = 0; index < 100; index++) {
     energi = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -230,6 +231,7 @@ for (let index = 0; index < 100; index++) {
         . . . . . f f f . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Food)
+    // @highlight
     if (Math.percentChance(80)) {
         
     } else {
@@ -245,7 +247,7 @@ Nå skal det være 80 % sannsynlighet for at energien havner i landet med
 sandfarge. Flytt ``||scene.place energi on top of random ||`` inn i den 
 øverste av de ledige plassene i ``|| logic.if then else||``-blokken. 
 
-```blocks
+```block
     
     energi = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -266,6 +268,7 @@ sandfarge. Flytt ``||scene.place energi on top of random ||`` inn i den
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Food)
     if (Math.percentChance(80)) {
+        // @highlight
         tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
     } else {
         
@@ -281,7 +284,7 @@ Flisen må endres til grønn.
 
 Tips: Du kan kopiere en blokk ved å høyreklikke på blokken og velge Duplicate.
 
-```blocks
+```block
 for (let index = 0; index < 100; index++) {
     energi = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -304,6 +307,7 @@ for (let index = 0; index < 100; index++) {
     if (Math.percentChance(80)) {
         tiles.placeOnRandomTile(energi, sprites.castle.tilePath5)
     } else {
+        // @highlight
         tiles.placeOnRandomTile(energi, sprites.castle.tileGrass1)
     }
 ```
@@ -319,7 +323,7 @@ Finn en ny ``||Logic.if true then else||``-blokk, og plasser den under
 Der det står ``||logic.true||`` skal vi som i forrige steg ha en 
 ``||math. 0% chance||``-blokk. Skriv 20 der det står 0. 
 
-```blocks
+```block
 
 let mySprite = sprites.create(img`
     . f f f . f f f f . f f f . 
@@ -339,9 +343,13 @@ let mySprite = sprites.create(img`
     . . . . f f f f f f . . . . 
     . . . . f f . . f f . . . . 
     `, SpriteKind.Player)
+// @highlight
 if (Math.percentChance(20)) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
-} else
+} else{
+
+}
+
 ```
 
 ### Steg 7
@@ -350,7 +358,7 @@ inn i ``||logic. if true then else ||`` slik at det er 20 %
 sannsynlighet for at spillefiguren havner i det sandfargete landet,
 og 80 % sannsynlighet for at den havner i det grønne landet. 
 
-```blocks
+```block
 let mySprite = sprites.create(img`
     . f f f . f f f f . f f f . 
     f f f f f c c c c f f f f f 
@@ -372,6 +380,7 @@ let mySprite = sprites.create(img`
 if (Math.percentChance(20)) {
     tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
 } else {
+    // @highlight
     tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass1)
 }
 ```
@@ -401,6 +410,7 @@ Den andre 0-en endres til 20.
 
 ```blocks
 info.onCountdownEnd(function () {
+    // @highlight
     if (info.score() < 20) {
         
     } else {
@@ -418,6 +428,7 @@ Hvilken skal endres til ``||game.WIN||`` og hvilken til ``||game.LOSE||`` ?
 ```blocks
 info.onCountdownEnd(function () {
     if (info.score() < 20) {
+        // @highlight
         game.over(false)
     } else {
         game.over(false)
