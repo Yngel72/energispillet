@@ -219,31 +219,13 @@ let grensevakt = sprites.create(img`
 ```
 ### Steg 5
 Plasser grensevakten ved å legge til en ``||Scene.place mySprite on top of random tile||``-blokk fra ``||Scene.Scene||``-menyen under den nye sprite-blokken din og velg ``||Variables.grensevakt||`` i stedet for ``||Variables.mySprite||`` og velg kontrollpostflisen som det den skal plasseres på.
+
 ```block
-namespace myTiles {
-    //% blockIdentity=images._tile
-    export const tile0 = img`
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-    `
-}
+
 namespace SpriteKind {
     export const Vakt = SpriteKind.create()
 }
+
 let vakt = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
