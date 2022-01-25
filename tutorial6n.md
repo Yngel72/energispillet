@@ -220,6 +220,8 @@ let grensevakt = sprites.create(img`
 ### Steg 5
 Plasser grensevakten ved å legge til en ``||Scene.place mySprite on top of random tile||``-blokk fra ``||Scene.Scene||``-menyen under den nye sprite-blokken din og velg ``||Variables.grensevakt||`` i stedet for ``||Variables.mySprite||`` og velg kontrollpostflisen som det den skal plasseres på.
 
+![Plasser grensevakt](https://raw.githubusercontent.com/Yngel72/energispillet/master/assets/plasservakt.png)
+
 ```block
 
 namespace SpriteKind {
