@@ -159,7 +159,7 @@ info.startCountdown(10)
 ## Introduksjon
 ### Introduksjon @unplugged
 
-Vi fortsetter der vi slapp. Nå skal vi legge til en fornybar energikilde. La oss legge til havvind!
+Vi fortsetter der vi slapp. Nå skal vi legge til en fornybar energikilde. Hva med å legge til havvind?
 
 ### Steg 2
 Det første vi trenger er en ny ``||loops:repeat||``-blokk for å fordele den nye energien på spillbrettet vårt.
